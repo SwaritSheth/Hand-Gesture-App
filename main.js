@@ -10,7 +10,7 @@ camera = document.getElementById("camera");
 Webcam.attach('#camera');
 
 function take_snapshot(){
-    Webcam.snap(function(date_url){
+    Webcam.snap(function(date_uri){
         document.getElementById("result").innerHTML='<img id="captured_image" src="'+ data_uri +'"/>';
     });
 }
@@ -23,7 +23,7 @@ function modelLoaded(){
 
 function check(){
     img=document.getElementById('captured_image');
-    classifier.classfy(img, gotResult);
+    classifier.classify(img, gotResult);
 }
 
 function speak(){
